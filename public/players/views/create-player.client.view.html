@@ -1,0 +1,32 @@
+<!-- The create article view -->
+<section data-ng-controller="PlayersController">
+    <div presentation-menu menu-title="Baudio Player"></div>
+
+    <div class="centerLinks">
+        <h1>New Player</h1>
+        <!-- The new article form -->
+        <form data-ng-submit="create()" novalidate>
+            <table style="width: 100%;">
+                <tr>
+                    <td><label style="float: left;margin-right: 1em;" for="title">Title</label></td>
+                    <td>
+                        <input style="width: 100%;float: left;margin-bottom: 1em;" type="text" data-ng-model="title" id="title" placeholder="Title" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label style="float: left;margin-right: 1em;" for="content">Content</label></td>
+                    <td>
+                        <textarea data-ng-model="content" id="content" cols="30" rows="10" placeholder="Content"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <input style="margin-left: 5em;" type="submit">
+            </div>
+            <!-- The error message element -->
+            <div data-ng-show="error">
+                <strong data-ng-bind="error"></strong>
+            </div>
+        </form>
+    </div>
+</section>

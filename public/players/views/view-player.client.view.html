@@ -1,0 +1,16 @@
+<!-- The player view -->
+<section data-ng-controller="PlayersController" data-ng-init="findOne()">
+    <div presentation-menu menu-title="Baudio Player"></div>
+    <div class="centerLinks">
+        <h1 data-ng-bind="player.title"></h1>
+        <!-- Show the editing buttons to the player creator -->
+            <a href="/#!/players/{{player._id}}/playSound">play</a>
+            <a href="/#!/players/{{player._id}}/edit">edit</a>
+            <a href="/#!/" data-ng-click="delete();">delete</a>
+        <small>
+            <em>Created on</em>
+            <em data-ng-bind="player.created | date:'mediumDate'"></em>
+        </small>
+        <p data-ng-bind="player.content"></p>
+    </div>
+</section>
