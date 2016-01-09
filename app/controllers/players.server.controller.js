@@ -23,7 +23,10 @@ var getErrorMessage = function(err) {
 exports.playSound = function(req, res) {
     //jsut retun player for now
     console.log("--- in playSound! " + req.id + " --");
-    res.json(player);
+    var returnPlayer = {
+        playerId: req.id
+    };
+    res.json(returnPlayer);
 };
 
 exports.playSoundInit = function(req, res, next, id) {

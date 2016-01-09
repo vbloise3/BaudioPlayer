@@ -21,10 +21,10 @@ module.exports = function(app) {
         .put(players.update)
         .delete(players.delete);
 
-    app.route('api/playSound/:playSoundId')
+    app.route('/api/playSound/:playSoundId')
         .get(players.playSound);
 
-    app.route('api/testREST')
+    app.route('/api/testREST')
         .get(players.testREST);
 
     // Set up the 'playerId' parameter middleware
