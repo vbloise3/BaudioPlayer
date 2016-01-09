@@ -24,6 +24,9 @@ module.exports = function(app) {
     app.route('api/playSound/:playSoundId')
         .get(players.playSound);
 
+    app.route('api/testREST')
+        .get(players.testREST);
+
     // Set up the 'playerId' parameter middleware
     app.param('playerId', players.playerByID);
 

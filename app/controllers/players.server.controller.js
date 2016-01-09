@@ -33,6 +33,11 @@ exports.playSoundInit = function(req, res, next, id) {
     next();
 };
 
+exports.testREST = function(req, res) {
+    console.log("in testREST");
+    res.json({"test":"REST"});
+};
+
 // Create a new controller method that creates new players
 exports.create = function(req, res) {
     // Create a new player object
